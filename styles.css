@@ -1,0 +1,264 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Grotesk', sans-serif;
+  background-color: black;
+  color: black;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 150px;
+  width: 100%;
+  padding: 20px 50px;
+  /* background-color: #333; */
+  background-image: url(cropped-KulturKur2024_Post01.jpg);
+  background-size: cover;
+  color: white;
+  /* border-bottom: 50px solid #FF00BB; */
+}
+
+#logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+}
+
+#hamburger-icon, #info {
+  /* These styles ensure that the left and right elements do not grow and are aligned properly */
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+#hamburger-icon-container, #info {
+min-width: 200px;
+}
+
+header #info {
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: right;
+}
+
+/* main {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+} */
+
+
+/* ---------- header ---------- */
+
+/* navigation */
+
+nav {
+  display: flex;
+  justify-content: center;
+  top: 150px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  background-color: #FF00BB;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+} 
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+nav ul li {
+  cursor: pointer;
+  width: 100%;
+  height: 6rem;
+  text-align: center;
+  line-height: 6rem;
+  transition: background-color 0.5s ease;
+}
+nav ul li:hover {
+  background-color: white;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+nav ul li:hover a {
+  color: black;
+}
+
+/*
+nav ul li a:hover {
+  color: gray;
+} */
+
+
+
+/* Hamburger Icon */
+header #hamburger-icon {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    scale: .9;
+    transition: scale 0.3s ease-in;
+}
+
+header #hamburger-icon:hover {
+  scale: 1;
+}
+
+
+header #hamburger-icon:hover div {
+    cursor: pointer;
+    background-color: #FF00BB;
+}
+
+
+header #hamburger-icon div {
+    margin: 10px;
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+/* open animation */
+header #hamburger-icon.open div:first-child {
+   transform: rotate(45deg) translate(0, 21px);
+}
+header #hamburger-icon.open div:nth-child(2) {
+   opacity: 0;
+}
+header #hamburger-icon.open div:last-child {
+   transform: rotate(-45deg) translate(0, -21px);
+}
+
+/* Menu Animation */
+
+/* close */
+  @keyframes shrink {
+      0% {
+        height: calc(6rem	* 4);
+        font-size: 2rem;
+      }
+      50% {
+        height: 0px;
+        font-size: 0;
+      }
+      100% {
+        height: 0px;
+        font-size: 0;
+        visibility: hidden;
+      }
+  }
+
+  .nav-shrink {
+    animation-name: shrink;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: 1; */
+    animation-timing-function: ease-in-out;
+  }
+
+  /* open */
+  @keyframes grow {
+    0% {
+      height: 0px;
+      font-size: 0px;
+    }
+    50% {
+      height: calc(6rem	* 4);
+      font-size: 0rem;
+    }
+    100% {
+      height: calc(6rem	* 4);
+      font-size: 2rem;
+      visibility: visible;
+    }
+  }
+
+  .nav-grow {
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: 1; */
+    animation-timing-function: ease-in-out;
+  } 
+
+  /* Home Section */
+
+  section { display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  }
+
+  #home {
+    background-color: black;
+    color: white;
+  }
+
+  #home-video, #video {
+    width: 100%!important;
+    height: calc(100% - 160px)!important;
+    border-radius: 20px !important;
+  }
+
+  #description {
+    margin: 10px;
+    border-radius: 40px;
+    background-color: white;
+    color: black;
+  } 
+
+  /* #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  #home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  } */
+
+  /* Info Section */
