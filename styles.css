@@ -13,6 +13,9 @@ body {
   font-family: 'Grotesk', sans-serif;
   background-color: black;
   color: black;
+  background-image: url(cropped-KulturKur2024_Post01.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 p {
@@ -25,25 +28,47 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   height: 150px;
   width: 100%;
   padding: 20px 50px;
   /* background-color: #333; */
-  background-image: url(cropped-KulturKur2024_Post01.jpg);
   background-size: cover;
   color: white;
   /* border-bottom: 50px solid #FF00BB; */
 }
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  animation: rollAway .5s ease-out forwards;
+}
+
+@keyframes rollAway {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 150px;
+    display: none;
+  }
+}
+
 
 #logo {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   font-family: 'Audiowide', cursive;
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 400;
   color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #hamburger-icon, #info {
@@ -150,22 +175,27 @@ header #hamburger-icon:hover div {
 
 
 header #hamburger-icon div {
-    margin: 10px;
-    height: 5px;
+    margin: 7px;
+    height: 7px;
     width: 100%;
     border-radius: 5px;
     background-color: white;
     transition: all 0.3s ease;
-}
+  }
 /* open animation */
+
+header #hamburger-icon.open {
+    transform: translateX(25%);
+}
+
 header #hamburger-icon.open div:first-child {
-   transform: rotate(45deg) translate(0, 21px);
+   transform: rotate(45deg) translate(0, 20.5px);
 }
 header #hamburger-icon.open div:nth-child(2) {
    opacity: 0;
 }
 header #hamburger-icon.open div:last-child {
-   transform: rotate(-45deg) translate(0, -21px);
+   transform: rotate(-45deg) translate(0, -20.5px);
 }
 
 /* Menu Animation */
@@ -222,16 +252,18 @@ header #hamburger-icon.open div:last-child {
 
   /* Home Section */
 
-  section { display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  border-collapse: collapse;
-  }
-
-  #home {
+  section { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 500px;
     background-color: black;
     color: white;
+  }
+
+  #home{
+    height: calc(100vh - 150px);
   }
 
   #home-video {
@@ -243,35 +275,55 @@ header #hamburger-icon.open div:last-child {
     border-radius: 2rem!important;
   }
 
-  #description {
+  #description-box {
     flex-direction: column;
     justify-content: start;
     margin: 2rem;
     padding: 2rem;
+    width: 100%;
     border-radius: 2rem;
     background-color: white;
     color: black;
     text-align: center;
   } 
 
-  /* #video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  #subscribe {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #FF00BB;
   }
 
-  #home-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  } */
+  #subscribe input {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #FF00BB;
+    background-color: #FF00BB;
+    font-size: 2rem;
+    font-weight: 600;
+    scale: .9;
+    transition: all 0.3s ease-in;
+  }
 
-  /* Info Section */
+  #subscribe input:hover {
+    color: white;
+    scale: 1;
+  }
+
+  #banner {
+    border: 1px solid white;
+    background-color: transparent;
+
+  }
+
+  #banner-frame {
+    margin: 2rem;
+    width: 100%;
+    height: calc(750px - 4rem);
+    background-color: transparent;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 4rem #000000;
+  }

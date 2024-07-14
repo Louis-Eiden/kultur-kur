@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="menu.js"></script>
+    <script src="reveal.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -34,7 +35,14 @@
             <section id="home">
                     <iframe id="home-video" src="https://www.youtube.com/embed/BsPFNyRvRRQ?si=-wP1evAUvmqbJddb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
+            <section id="subscribe">
+                <h2>Sing up for Exclusive Kultur-Kur</br> Festival Updates</h2>
+                <form action="subscribe.php" method="post">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </section>
             <section id="description">
+                <div id="description-box">
                 <h2>
                     🎆 Kultur Kur Festival 2024</br>
                 </h2>
@@ -81,8 +89,33 @@
                     </br>
                 <b>💜 With great anticipation, Your Kultur Crew</b>
                 </p>
+            </div>
             </section>
-            <section></section>
+
+            <section id="banner">
+                <div id="banner-frame"></div>
+            </section>
+
+            <section id="areas">
+                <h2>Areas</h2>
+                <div id="areas-container">
+                    <div class="area">
+                        <img src="images/area1.jpg" alt="Area 1">
+                        <h3>Area 1</h3>
+                        <p>Area 1 is the main area of the festival. Here you will find the main stage, the bar, and the food stalls.</p>
+                    </div>
+                    <div class="area">
+                        <img src="images/area2.jpg" alt="Area 2">
+                        <h3>Area 2</h3>
+                        <p>Area 2 is the camping area. Here you can set up your tent and enjoy the festival atmosphere.</p>
+                    </div>
+                    <div class="area">
+                        <img src="images/area3.jpg" alt="Area 3">
+                        <h3>Area 3</h3>
+                        <p>Area 3 is the chillout area. Here you can relax and enjoy the music.</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 </body>
