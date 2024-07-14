@@ -18,6 +18,12 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  font-family: 'Audiowide', sans-serif;
+}
+
 p {
   margin-bottom: 2rem;
   text-align: center;
@@ -257,7 +263,7 @@ header #hamburger-icon.open div:last-child {
     justify-content: center;
     align-items: center;
     height: 100%;
-    min-height: 500px;
+    /* min-height: 500px; */
     background-color: black;
     color: white;
   }
@@ -275,17 +281,47 @@ header #hamburger-icon.open div:last-child {
     border-radius: 2rem!important;
   }
 
-  #description-box, #areas-box {
+  #description-box, .areas-box {
     flex-direction: column;
     justify-content: start;
-    margin: 2rem;
+    margin: 1rem 2rem;
     padding: 2rem;
-    width: 100%;
+    width: calc(100% - 4rem);
     border-radius: 2rem;
     background-color: white;
     color: black;
     text-align: center;
-  } 
+    z-index: 10;
+  }
+
+  /* Initial state for elements */
+  #description-box * {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  #description-box .right {
+    transform: translateX(50%);
+  }
+
+  #description-box .appear {
+    transform: translateX(0);
+  }
+
+  /* Reveal animations */
+  #description-box .reveal-left {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #description-box .reveal-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #description-box .reveal-appear {
+    opacity: 1;
+  }	
 
   #subscribe {
     flex-direction: column;
@@ -295,23 +331,6 @@ header #hamburger-icon.open div:last-child {
     text-align: center;
     color: #FF00BB;
     overflow: hidden;
-  }
-
-  #subscribe input {
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid #FF00BB;
-    background-color: #FF00BB;
-    font-size: 2rem;
-    font-weight: 600;
-    scale: .9;
-    transition: all 0.3s ease-in;
-  }
-
-  #subscribe input:hover {
-    color: white;
-    scale: 1;
   }
 
   #subscribe-content {
@@ -324,13 +343,28 @@ header #hamburger-icon.open div:last-child {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   #subscribe-content input {
-    transition: transform 1s ease-out;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #FF00BB;
+    background-color: #FF00BB;
+    font-size: 2rem;
+    font-weight: 600;
+    scale: .9;
+    transition: transform 1s ease-out, scale 0.3s ease-in, color 0.3s ease-in;
+  }
+
+  #subscribe-content input:hover,
+  #subscribe-content.reveal input:hover
+  {
+    color: white;
+    scale: 1;
   }
   
   #subscribe-content.reveal input {
-    transform: translateY(0);
+    transform: translateY(0) scale(0.9);
   }
 
   #banner {
@@ -340,10 +374,14 @@ header #hamburger-icon.open div:last-child {
   }
 
   #banner-frame {
-    margin: 2rem;
+    margin: 1rem 2rem;
     width: 100%;
     height: calc(750px - 4rem);
     background-color: transparent;
     border-radius: 2rem;
     box-shadow: 0 0 0 4rem #000000;
+  }
+
+  #areas {
+  flex-direction: column;
   }
