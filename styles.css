@@ -314,13 +314,13 @@ header #hamburger-icon.open div:last-child {
     scale: 1;
   }
 
-  #subscribe-content h2 {
+  #subscribe-content {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
-  #subscribe-content.reveal h2 {
+  #subscribe-content.reveal {
     opacity: 1;
     transform: translateY(0);
   }
