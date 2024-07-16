@@ -1,8 +1,8 @@
-/* imports */
+/* ==================== Imports ==================== */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-/* css reset */
+/* ==================== CSS reset ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@
   overflow-x: hidden;
 }
 
+/* ==================== Global styles ==================== */
 body {
   font-family: 'Grotesk', sans-serif;
   background-color: black;
@@ -30,6 +31,7 @@ p {
   text-align: center;
 }
 
+/* ==================== Header ==================== */
 header {
   z-index: 1;
   display: flex;
@@ -66,6 +68,62 @@ header::before {
   }
 }
 
+/* ==================== Hamburger Icon ==================== */
+header #hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 70px;
+  scale: .9;
+  transition: scale 0.3s ease-in;
+  overflow: hidden;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+header #hamburger-icon:hover {
+  scale: 1;
+}
+
+
+header #hamburger-icon:hover > div {
+  cursor: pointer;
+  background-color: #FF00BB;
+}
+
+header #hamburger-icon div {
+  margin-bottom: 7px;
+  height: 7px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+header #hamburger-icon div:last-child {
+  margin-bottom: 0;
+}
+
+/* open animation */
+header #hamburger-icon.open {
+  transform: translateX(20%);
+}
+
+header #hamburger-icon.open div:first-child {
+ transform: rotate(45deg) translate(0, 20.5px);
+}
+
+header #hamburger-icon.open div:nth-child(2) {
+ opacity: 0;
+}
+
+header #hamburger-icon.open div:last-child {
+ transform: rotate(-45deg) translate(0, -20.5px);
+}
+
+/* ==================== LOGO ==================== */
 
 #logo {
   flex-grow: 1;
@@ -78,8 +136,8 @@ header::before {
   text-shadow: 2px 2px 4px #000000;
 }
 
+/* ==================== Info ==================== */
 #hamburger-icon, #info {
-  /* These styles ensure that the left and right elements do not grow and are aligned properly */
   flex-grow: 0;
   display: flex;
   justify-content: center;
@@ -96,28 +154,14 @@ header #info {
   text-align: right;
 }
 
-/* main {
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-  height: 100vh;
-  background-color: black;
-  color: white;
-} */
-
-
-/* ---------- header ---------- */
-
-/* navigation */
-
+/* ==================== Navigation ==================== */
 nav {
   display: flex;
   justify-content: center;
   top: 150px;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   background-color: #FF00BB;
   width: 100%;
@@ -132,6 +176,7 @@ nav ul {
   list-style: none;
   width: 100%;
 }
+
 nav ul li {
   cursor: pointer;
   width: 100%;
@@ -139,6 +184,7 @@ nav ul li {
   text-align: center;
   line-height: 6rem;
   transition: background-color 0.5s ease;
+  overflow: hidden;
 }
 nav ul li:hover {
   background-color: white;
@@ -160,104 +206,59 @@ nav ul li a:hover {
 } */
 
 
-
-/* Hamburger Icon */
-header #hamburger-icon {
-    display: block;
-    cursor: pointer;
-    width: 50px;
-    scale: .9;
-    transition: scale 0.3s ease-in;
-}
-
-header #hamburger-icon:hover {
-  scale: 1;
-}
-
-
-header #hamburger-icon:hover div {
-    cursor: pointer;
-    background-color: #FF00BB;
-}
-
-
-header #hamburger-icon div {
-    margin: 7px;
-    height: 7px;
-    width: 100%;
-    border-radius: 5px;
-    background-color: white;
-    transition: all 0.3s ease;
-  }
-/* open animation */
-
-header #hamburger-icon.open {
-    transform: translateX(25%);
-}
-
-header #hamburger-icon.open div:first-child {
-   transform: rotate(45deg) translate(0, 20.5px);
-}
-header #hamburger-icon.open div:nth-child(2) {
-   opacity: 0;
-}
-header #hamburger-icon.open div:last-child {
-   transform: rotate(-45deg) translate(0, -20.5px);
-}
-
-/* Menu Animation */
+/* nav Animation */
 
 /* close */
-  @keyframes shrink {
-      0% {
-        height: calc(6rem	* 4);
-        font-size: 2rem;
-      }
-      50% {
-        height: 0px;
-        font-size: 0;
-      }
-      100% {
-        height: 0px;
-        font-size: 0;
-        visibility: hidden;
-      }
+@keyframes shrink {
+  0% {
+    height: calc(6rem	* 4);
+    font-size: 2rem;
   }
-
-  .nav-shrink {
-    animation-name: shrink;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    /* animation-iteration-count: 1; */
-    animation-timing-function: ease-in-out;
+  50% {
+    height: 0px;
+    font-size: 0;
   }
-
-  /* open */
-  @keyframes grow {
-    0% {
-      height: 0px;
-      font-size: 0px;
-    }
-    50% {
-      height: calc(6rem	* 4);
-      font-size: 0rem;
-    }
-    100% {
-      height: calc(6rem	* 4);
-      font-size: 2rem;
-      visibility: visible;
-    }
+  100% {
+    height: 0px;
+    font-size: 0;
+    visibility: hidden;
   }
+}
 
-  .nav-grow {
-    animation-name: grow;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    /* animation-iteration-count: 1; */
-    animation-timing-function: ease-in-out;
-  } 
+.nav-shrink {
+animation-name: shrink;
+animation-duration: 0.5s;
+animation-fill-mode: forwards;
+/* animation-iteration-count: 1; */
+animation-timing-function: ease-in-out;
+}
 
-  /* Home Section */
+/* open */
+@keyframes grow {
+0% {
+  height: 0px;
+  font-size: 0px;
+}
+50% {
+  height: calc(6rem	* 4);
+  font-size: 0rem;
+}
+100% {
+  height: calc(6rem	* 4);
+  font-size: 2rem;
+  visibility: visible;
+}
+}
+
+.nav-grow {
+animation-name: grow;
+animation-duration: 0.5s;
+animation-fill-mode: forwards;
+/* animation-iteration-count: 1; */
+animation-timing-function: ease-in-out;
+} 
+
+/* ==================== Home Section ==================== */
 
   section { 
     display: flex;
