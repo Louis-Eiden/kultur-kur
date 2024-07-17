@@ -15,7 +15,7 @@ body {
   font-family: 'Grotesk', sans-serif;
   background-color: black;
   color: black;
-  background-image: url(cropped-KulturKur2024_Post01.jpg);
+  background-image: url('assets/WhatsApp Bild 2024-07-15 um 14.16.16_5d6a798f.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -388,14 +388,28 @@ animation-timing-function: ease-in-out;
 
   /* =================== background =================== */
 
-  @media (max-width: 1336px ) {
+  @media (max-width: 1420px) {
+    body {
+      background-position: top center;
+      background-size: 107.5%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* @media (max-width: 1336px ) {
     body {
       background-position: top center;
       background-size: contain;
       background-repeat: no-repeat;
     }
-  }
-
+  } */
+  /* @media (max-width: 878px) {
+    body {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  } */
 
   /* ==================== iPad Pro ==================== */
   @media (max-width: 1366px) {
@@ -427,6 +441,10 @@ animation-timing-function: ease-in-out;
     
     header #info {
       font-size: 1rem;
+    }
+
+    #banner-frame {
+      height: calc(500px - 2rem);
     }
   }
 
@@ -562,5 +580,24 @@ animation-timing-function: ease-in-out;
   #banner-frame {
     margin: 1rem 1rem;
     height: calc(500px - 2rem);
+  }
+}
+
+
+/* ==================== small tablets ==================== */
+@media (max-width: 791px) {
+  #banner-frame {
+    height: calc(350px - 2rem);
+  }
+}
+
+/* ==================== Phone ==================== */
+
+@media (max-width: 625px) {
+  #Hamburger-icon-container {
+  }
+
+  #info {
+    display: none;
   }
 }
