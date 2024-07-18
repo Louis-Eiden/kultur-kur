@@ -31,6 +31,16 @@ p {
   text-align: center;
 }
 
+section { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* min-height: 500px; */
+  background-color: black;
+  color: white;
+}
+
 /* ==================== Header ==================== */
 header {
   z-index: 1;
@@ -200,12 +210,6 @@ nav ul li:hover a {
   color: black;
 }
 
-/*
-nav ul li a:hover {
-  color: gray;
-} */
-
-
 /* nav Animation */
 
 /* close */
@@ -259,17 +263,6 @@ animation-timing-function: ease-in-out;
 } 
 
 /* ==================== Home Section ==================== */
-
-  section { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    /* min-height: 500px; */
-    background-color: black;
-    color: white;
-  }
-
   #home{
     height: calc(100vh - 150px);
   }
@@ -283,6 +276,68 @@ animation-timing-function: ease-in-out;
     border-radius: 2rem!important;
   }
 
+/* ==================== Subscribe Section ==================== */
+  #subscribe {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #FF00BB;
+    overflow: hidden;
+  }
+
+  #subscribe-content {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  #subscribe-content.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #subscribe-content input {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #FF00BB;
+    background-color: #FF00BB;
+    font-size: 2rem;
+    font-weight: 600;
+    scale: .9;
+    transition: transform 1s ease-out, scale 0.3s ease-in, color 0.3s ease-in;
+  }
+
+  #subscribe-content.reveal input {
+    transform: translateY(0) scale(0.9);
+  }
+
+  #subscribe-content input:hover,
+  #subscribe-content.reveal input:hover
+  {
+    color: white;
+    scale: 1;
+    animation: pulse 1s forwards;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    25% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+/* ==================== Description Section ==================== */
   #description-box, .areas-box {
     flex-direction: column;
     justify-content: start;
@@ -325,49 +380,7 @@ animation-timing-function: ease-in-out;
     opacity: 1;
   }	
 
-  #subscribe {
-    flex-direction: column;
-    height: auto;
-    padding: 2rem;
-    font-size: 2.5rem;
-    text-align: center;
-    color: #FF00BB;
-    overflow: hidden;
-  }
-
-  #subscribe-content {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  }
-  
-  #subscribe-content.reveal {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  #subscribe-content input {
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid #FF00BB;
-    background-color: #FF00BB;
-    font-size: 2rem;
-    font-weight: 600;
-    scale: .9;
-    transition: transform 1s ease-out, scale 0.3s ease-in, color 0.3s ease-in;
-  }
-
-  #subscribe-content input:hover,
-  #subscribe-content.reveal input:hover
-  {
-    color: white;
-    scale: 1;
-  }
-  
-  #subscribe-content.reveal input {
-    transform: translateY(0) scale(0.9);
-  }
+/* ==================== Banner section ==================== */
 
   #banner {
     background-color: transparent;
@@ -382,72 +395,90 @@ animation-timing-function: ease-in-out;
     box-shadow: 0 0 0 4rem #000000;
   }
 
-  #areas {
+/* ==================== Areas Section ==================== */
+
+#areas {
   flex-direction: column;
+}
+
+.areas-box {
+  min-height: 500px;
+}
+
+/* ==================== Footer ==================== */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: transparent;
+  color: white;
+}
+
+/* ==================== Media Queries for responsivness ==================== */
+
+/* =================== background =================== */
+
+@media (max-width: 1420px) {
+  body {
+    background-position: top center;
+    background-size: 107.5%;
+    background-repeat: no-repeat;
+  }
+}
+
+/* @media (max-width: 1336px ) {
+  body {
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+} */
+/* @media (max-width: 878px) {
+  body {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+} */
+
+/* ==================== iPad Pro ==================== */
+@media (max-width: 1366px) {
+
+  header #hamburger-icon {
+    width: 60px;
   }
 
-  /* =================== background =================== */
-
-  @media (max-width: 1420px) {
-    body {
-      background-position: top center;
-      background-size: 107.5%;
-      background-repeat: no-repeat;
-    }
+    
+  header #hamburger-icon div {
+    margin-bottom: 6px;
+    height: 6px;
+    border-radius: 5px;
+  }
+    
+  /* open animation */
+    
+  header #hamburger-icon.open div:first-child {
+    transform: rotate(45deg) translate(0, 17.5px);
+  }
+    
+  header #hamburger-icon.open div:last-child {
+    transform: rotate(-45deg) translate(0, -17.5px);
   }
 
-  /* @media (max-width: 1336px ) {
-    body {
-      background-position: top center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  } */
-  /* @media (max-width: 878px) {
-    body {
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  } */
-
-  /* ==================== iPad Pro ==================== */
-  @media (max-width: 1366px) {
-
-    header #hamburger-icon {
-      width: 60px;
-    }
-
+  #logo {
+    font-size: 3.5rem;
+  }
     
-    header #hamburger-icon div {
-      margin-bottom: 6px;
-      height: 6px;
-      border-radius: 5px;
-    }
-    
-    /* open animation */
-    
-    header #hamburger-icon.open div:first-child {
-     transform: rotate(45deg) translate(0, 17.5px);
-    }
-    
-    header #hamburger-icon.open div:last-child {
-     transform: rotate(-45deg) translate(0, -17.5px);
-    }
-
-    #logo {
-      font-size: 3.5rem;
-    }
-    
-    header #info {
-      font-size: 1rem;
-    }
-
-    #banner-frame {
-      height: calc(500px - 2rem);
-    }
+  header #info {
+    font-size: 1rem;
   }
 
+  #banner-frame {
+    height: calc(500px - 2rem);
+  }
+}
 /* ==================== iPad ==================== */
 
 @media (max-width: 950px) {
