@@ -1,7 +1,7 @@
 // header reveal
-window.addEventListener('load', function() {
-    document.getElementById('header').style.transform = 'scaleY(1)';
-  });
+// window.addEventListener('load', function() {
+//     document.getElementById('header').style.transform = 'scaleY(1)';
+//   });
 
 // subscribe reveal
   document.addEventListener('DOMContentLoaded', function() {

@@ -5,9 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <script src="scripts/menu.js"></script>
-        <script src="scripts/reveal.js"></script>
-        <script src="scripts/background.js"></script>
         <title>Document</title>
     </head>
 
@@ -16,9 +13,9 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#description">About</a></li>
+                <li><a href="#areas">Areas</a></li>
+                <li><a href="#location">location</a></li>
             </ul>
         </nav>
 
@@ -45,7 +42,12 @@
             <div class="sections-container">
                 
                 <section id="home">
-                        <iframe id="home-video" src="https://www.youtube.com/embed/BsPFNyRvRRQ?si=-wP1evAUvmqbJddb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!-- <iframe id="home-video" src="https://www.youtube.com/embed/BsPFNyRvRRQ?si=-wP1evAUvmqbJddb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    <video id="home-video" controls>
+                        <source src="assets/WhatsApp Video 2024-07-15 um 14.26.54_b45a6519.mp4"" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                        
                 </section>
 
                 <section id="subscribe">
@@ -113,6 +115,8 @@
 
                 <section id="areas">
 
+                    <h1>MEET THE 3 AREAS OF THE FESTIVAL</h1>
+
                     <div id="area1" class="areas-box">
                         <div id="areas-container">
                             <div class="area">
@@ -139,15 +143,37 @@
                             </div>
                         </div>
                     </div>
+
                 </section>
                 
+                <section id="location">
+                    <div id="location-container">
+                        <h1>WHERE WE ARE</h1>
+                        <p>Grillhütte Leideneck<br>56288 Bell (Hunsrück)</p>
+                        <hr>
+                        <div>                        
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.342713823547!2d7.357714676533236!3d50.04241097151713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be156f183421cd%3A0x8aa44db1478dc602!2sGrillh%C3%BCtte%20Leideneck!5e0!3m2!1sde!2sde!4v1721416926350!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </section>
+
             </div>
+
         </main>
+
         <footer>
             <div id="footer-content">
-                <div id="footer-logo">Kultur-Kur</div>
+                <div id="footer-logo">Kultur-Kur Festival</div>
                 <div id="footer-info">23-25 August 2024 </br>Grillhütte Leideneck</div>
             </div>
         </footer>
+
+        <button id="scrollToTopBtn" title="Go to top">Top</button>
+
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/reveal.js"></script>
+        <script src="scripts/background.js"></script>
+        <script src="scripts/scrollToTopBtn.js"></script>
+
     </body>
 </html>
