@@ -46,8 +46,8 @@ section {
 /* Scroll to Top Button */
 #scrollToTopBtn {
   position: fixed; /* Fixed/sticky position */
-  bottom: 2rem; /* Place the button at the bottom of the page */
-  right: 2rem; /* Place the button 30px from the right */
+  bottom: 4rem; /* Place the button at the bottom of the page */
+  right: 4rem; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -67,6 +67,18 @@ section {
 }
 
 /* ==================== Animations ==================== */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes pulse {
   0% {
@@ -311,19 +323,19 @@ animation-timing-function: ease-in-out;
 
 /* open */
 @keyframes grow {
-0% {
-  height: 0px;
-  font-size: 0px;
-}
-50% {
-  height: calc(6rem	* 4);
-  font-size: 0rem;
-}
-100% {
-  height: calc(6rem	* 4);
-  font-size: 2rem;
-  visibility: visible;
-}
+  0% {
+    height: 0px;
+    font-size: 0px;
+  }
+  50% {
+    height: calc(6rem	* 4);
+    font-size: 0rem;
+  }
+  100% {
+    height: calc(6rem	* 4);
+    font-size: 2rem;
+    visibility: visible;
+  }
 }
 
 .nav-grow {
@@ -346,6 +358,7 @@ animation-timing-function: ease-in-out;
   width: calc(100% - 4rem)!important;
   height: calc(100% - 150px - 4rem)!important; /* 100% - 150px for the header and 1rem */
   border-radius: 2rem!important;
+  animation: forwards 1s appear;
 }
 
 /* #home-video::-webkit-media-controls {
