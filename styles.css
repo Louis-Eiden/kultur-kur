@@ -16,7 +16,7 @@ body {
   font-family: 'Grotesk', sans-serif;
   background-color: black;
   color: black;
-  background-image: url('assets/WhatsApp Bild 2024-07-15 um 14.16.16_5d6a798f.jpg');
+  background-image: url('assets/background1.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -630,7 +630,7 @@ footer {
 
 @media (max-width: 950px) {
   header {
-    height: 100px;
+    height: 125px;
     padding: 10px 25px;
   }
 
