@@ -16,7 +16,7 @@ body {
   font-family: 'Grotesk', sans-serif;
   background-color: black;
   color: black;
-  background-image: url('assets/background1.jpg');
+  background-image: url('assets/img/bg/background3.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -399,6 +399,10 @@ animation-timing-function: ease-in-out;
   overflow: hidden;
 }
 
+#subscribe-content h2 {
+  margin: 2rem;
+}
+
 #subscribe-content {
   opacity: 0;
   transform: translateY(100px);
@@ -502,16 +506,113 @@ animation-timing-function: ease-in-out;
 #areas h1 {
   font-size: 3.5rem;
   margin: 2rem;
+  text-align: center;
 }
 
-.areas-box {
+.area {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* .areas-box {
   width: 100%;
   border-radius: 0;
   min-height: 500px;
-}
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+} */
 
 .areas-box:last-child {
   margin-bottom: 0rem;
+}
+
+.area-content h2 {
+  margin-bottom: 1rem;
+  font-family: 'Grotesk', sans-serif;
+}
+
+/* ==================== Slide Show ==================== */
+.areas-box {
+  margin: 1rem 2rem;
+  padding: 2rem;
+  width: calc(100% - 4rem);
+  border-radius: 2rem;
+  background-color: white;
+  color: black;
+}
+
+.area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.area-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.slideshow-container {
+  position: relative;
+  flex: 1;
+  height: 550px;
+}
+
+.slides-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.mySlides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #FF00BB;
 }
 
 /* ==================== Location Section ==================== */
@@ -717,15 +818,16 @@ footer {
   }
 
   #home-video {
-    top: calc(100px + 1rem);
+    top: calc(125px + 1rem);
     margin: 0 1rem;
     width: calc(100% - 2rem)!important;
-    height: calc(100% - 100px - 2rem)!important;
+    height: calc(100% - 125px - 2rem)!important;
   }
 
-  #description-box, .areas-box {
+  #description-box, .areas-box, #location-container, #banner-frame {
+    margin: 1rem;
     padding: 1rem;
-    width: 100%;
+    width: calc(100% - 2rem);
   }
 
   #description-box *:not(h1) {
@@ -758,20 +860,88 @@ footer {
   #banner-frame {
     height: calc(350px - 2rem);
   }
+
+  .area {
+    flex-direction: column;
+  }
+
+  .area-content {
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .slideshow-container {
+    width: 100%;
+    height: 200px; /* Adjust this value as needed */
+    margin-bottom: 1rem;
+  }
+
+  .mySlides, .mySlides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .prev, .next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .area-content {
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
 }
 
-/* ==================== Phone ==================== */
+/* ==================== Big Phones ==================== */
 
 @media (max-width: 625px) {
   #info {
     display: none;
   }
+
+  #description-box, .areas-box, #location-container, #banner-frame {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+  }
 }
 
-/* ==================== Small Phone ==================== */
+/* ==================== Phones ==================== */
+
+@media (max-width: 530px ) {
+  body {
+    background-image: url('assets/img/bg/background1.jpg');
+  }
+  header {
+    height: 75px;
+  }
+  #home-video {
+    top: calc(75px + 1rem);
+    height: calc(100% - 100px - 2rem)!important;
+  }
+  #footer-content {
+    display: none;  
+  }
+}
+
+/* ==================== Small Phones ==================== */
 
 @media (max-width: 500px) {
   #logo {
     font-size: 2.5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ==================== Extra Small Phones ==================== */
+
+@media (max-width: 370px) {
+  #logo {
+    font-size: 2rem;
   }
 }

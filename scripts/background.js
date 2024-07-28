@@ -1,18 +1,27 @@
 var bg = document.body;
 const footer = document.querySelector('footer');
-const footerRect = footer.getBoundingClientRect();
-const viewportHeight = window.innerHeight;
-const distanceFromBottom = footerRect.top - viewportHeight;
 
-window.addEventListener('scroll', function() {
-  console.log('distanceFromBottom', distanceFromBottom);
+function updateBackgroundPosition() {
+  const scrollY = window.scrollY;
+  const viewportHeight = window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+  const footerRect = footer.getBoundingClientRect();
+  const distanceFromBottom = pageHeight - (scrollY + viewportHeight);
 
-  if (window.scrollY < 200) {
-    document.body.style.backgroundPosition = 'top center';
-  } else if (window.scrollY > 200) {
-    document.body.style.backgroundPosition = 'center';
+  if (scrollY < 200) {
+    bg.style.backgroundPosition = 'top center';
   } else if (distanceFromBottom <= 250) {
-    document.body.style.backgroundPosition = 'bottom center';
+    bg.style.backgroundPosition = 'bottom center';
+  } else {
+    bg.style.backgroundPosition = 'center';
   }
-});
+}
 
+// Initial call to set the correct position
+updateBackgroundPosition();
+
+// Add event listener for scroll
+window.addEventListener('scroll', updateBackgroundPosition);
+
+// Add event listener for resize to handle orientation changes
+window.addEventListener('resize', updateBackgroundPosition);
