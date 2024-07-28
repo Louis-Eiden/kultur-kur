@@ -125,6 +125,20 @@ section {
   }
 }
 
+/* make a bouncing animation */
+
+@keyframes logoBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* ==================== Header ==================== */
 header {
   z-index: 1;
@@ -134,7 +148,7 @@ header {
   position: sticky;
   height: 150px;
   width: 100%;
-  padding: 20px 50px;
+  padding: 0 50px;
   /* background-color: #333; */
   background-size: cover;
   color: white;
@@ -228,7 +242,14 @@ header #hamburger-icon.open div:last-child {
   font-weight: 400;
   color: white;
   text-shadow: 2px 2px 4px #000000;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
+
+#logo:hover {
+  animation: logoBounce 2s ease-in-out infinite;
+}
+
 
 /* ==================== Info ==================== */
 #hamburger-icon, #info {
@@ -356,10 +377,10 @@ animation-timing-function: ease-in-out;
 
 #home-video {
   position: absolute;
-  top: calc(150px + 2rem);
-  margin: 0 2rem;
-  width: calc(100% - 4rem)!important;
-  height: calc(100% - 150px - 4rem)!important; /* 100% - 150px for the header and 1rem */
+  top: calc(150px);
+  margin: 2rem;
+  /* width: calc(100% - 4rem)!important; */
+  height: calc(100vh - 150px - 4rem)!important; /* 100% - 150px for the header and 1rem */
   border-radius: 2rem!important;
   animation: forwards 1s appear;
 }
@@ -509,30 +530,6 @@ animation-timing-function: ease-in-out;
   text-align: center;
 }
 
-.area {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-/* .areas-box {
-  width: 100%;
-  border-radius: 0;
-  min-height: 500px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-} */
-
-.areas-box:last-child {
-  margin-bottom: 0rem;
-}
-
-.area-content h2 {
-  margin-bottom: 1rem;
-  font-family: 'Grotesk', sans-serif;
-}
-
-/* ==================== Slide Show ==================== */
 .areas-box {
   margin: 1rem 2rem;
   padding: 2rem;
@@ -553,10 +550,23 @@ animation-timing-function: ease-in-out;
   padding-right: 2rem;
 }
 
+.area-content:nth-child(2) {
+  padding-left: 2rem;
+}
+
+.area-content h2 {
+  margin-bottom: 1rem;
+  font-family: 'Grotesk', sans-serif;
+}
+
+/* ==================== Slide Show ==================== */
+
+
 .slideshow-container {
   position: relative;
   flex: 1;
   height: 550px;
+  border-radius: 2rem;
 }
 
 .slides-wrapper {
@@ -623,6 +633,7 @@ animation-timing-function: ease-in-out;
   height: 100%;
   width: calc(100% - 4rem);
   margin: 2rem;
+  margin-bottom: 3rem;
   padding: 2rem;
   background-color: #FF00BB;
   color: white;
@@ -649,8 +660,18 @@ animation-timing-function: ease-in-out;
 
 #location iframe {
   border-radius: 2rem;
-  margin: auto;
-  margin-top: 2rem;
+  margin: 2rem;
+  margin-top: 3rem;
+}
+
+#map {
+  height:450px;
+  /* keep aspect-ratio */
+  width: 100%;
+  border-radius: 2rem;
+  margin: 2rem;
+  margin-top: 3rem;
+
 }
 
 /* ==================== Footer ==================== */
@@ -674,22 +695,17 @@ footer {
     background-size: 107.5%;
     background-repeat: no-repeat;
   }
-}
 
-/* @media (max-width: 1336px ) {
-  body {
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  #maps {
+    display: flex;
+    flex-direction: column;
   }
-} */
-/* @media (max-width: 878px) {
-  body {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+  #map, #location iframe {
+    margin: 2rem auto 0;
   }
-} */
+
+}
 
 /* ==================== iPad Pro ==================== */
 @media (max-width: 1366px) {
@@ -697,7 +713,6 @@ footer {
   header #hamburger-icon {
     width: 60px;
   }
-
     
   header #hamburger-icon div {
     margin-bottom: 6px;
@@ -818,16 +833,16 @@ footer {
   }
 
   #home-video {
-    top: calc(125px + 1rem);
-    margin: 0 1rem;
-    width: calc(100% - 2rem)!important;
+    top: calc(125px);
+    margin: 1rem;
+    /* width: calc(100% - 2rem)!important; */
     height: calc(100% - 125px - 2rem)!important;
   }
 
   #description-box, .areas-box, #location-container, #banner-frame {
-    margin: 1rem;
+    margin: 1rem 2rem;
     padding: 1rem;
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
   }
 
   #description-box *:not(h1) {
@@ -844,7 +859,7 @@ footer {
   }
 
   #subscribe-content input {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     font-size: 1.5rem;
   }
 
@@ -852,6 +867,22 @@ footer {
     margin: 1rem 1rem;
     height: calc(500px - 2rem);
   }
+
+  #map, #location iframe {
+    border-radius: 1rem;
+    height: auto;
+    width: 100%;
+    margin: 1rem;
+  }
+
+  #location iframe {
+    margin-top: 2rem;
+  }
+
+
+  
+
+
 }
 
 
@@ -861,8 +892,21 @@ footer {
     height: calc(350px - 2rem);
   }
 
+  /* .areas-box {
+    height: 1000px; 
+  } */
+
   .area {
     flex-direction: column;
+  }
+
+  /* New styles for reordering */
+  #area2 .area-content {
+    order: -1; /* This moves the content before the slideshow */
+  }
+
+  #area2 .slideshow-container {
+    order: 1; /* This ensures the slideshow comes after the content */
   }
 
   .area-content {
@@ -871,8 +915,8 @@ footer {
   }
 
   .slideshow-container {
+    flex: auto;
     width: 100%;
-    height: 200px; /* Adjust this value as needed */
     margin-bottom: 1rem;
   }
 
@@ -919,8 +963,8 @@ footer {
     height: 75px;
   }
   #home-video {
-    top: calc(75px + 1rem);
-    height: calc(100% - 100px - 2rem)!important;
+    top: calc(75px);
+    height: calc(100% - 75px - 2rem)!important;
   }
   #footer-content {
     display: none;  
