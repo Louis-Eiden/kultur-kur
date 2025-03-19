@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="Kultur, Festival, Outdoor, Music">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Louis Eiden">
         <link rel="stylesheet" href="styles.css">
         <title>Kultur-Kur</title>
     </head>
@@ -12,7 +14,6 @@
 
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#description">About</a></li>
                 <li><a href="#areas">Areas</a></li>
                 <li><a href="#location">Location</a></li>
@@ -48,12 +49,26 @@
                         Your browser does not support the video tag.
                     </video>
                 </section>
-
-                <section id="subscribe">
-                    <div id="subscribe-content">
-                        <h2>Sing up for Exclusive Kultur-Kur Festival Updates</h2>
-                        <form action="subscribe.php" method="post">
-                            <input type="submit" value="Subscribe">
+                
+                <section id="contact">
+                    <div id="contact-content">
+                        <h2>Sign up for Exclusive Kultur-Kur Festival Updates</h2>
+                        <button class="contact-toggle-btn">Kontakt</button>
+                        <form
+                            class="contact-form"
+                            action="https://formspree.io/f/xjkykpve"
+                            method="POST"
+                        >
+                            <label>
+                                Your email:
+                                <input type="email" name="email">
+                            </label>
+                            <label>
+                                Your message:
+                                <textarea name="message"></textarea>
+                            </label>
+                            <!-- your other form fields go here -->
+                            <button type="submit">Send</button>
                         </form>
                     </div>
                 </section>
@@ -123,7 +138,7 @@
                                 <p>The main bar is conveniently located here, offering a wide selection of refreshing drinks to keep you energized. Don't forget to take a breather and mingle with fellow festival-goers in the chill-out corners surrounding the dance floor.</p>
                                 <p>The Main Stage area is where memories are made and the spirit of Kultur-Kur truly comes alive!</p>
                             </div>
-                            <div class="slideshow-container" id="slideshow1">
+                            <div class="slideshow-container appear" id="slideshow1">
                                 <div class="slides-wrapper">
                                     <div class="mySlides fade-in">
                                         <img src="assets/img/dancefloor1.jpeg" alt="Slide 1">
@@ -140,9 +155,6 @@
                                     <div class="mySlides">
                                         <img src="assets/img/dancefloor5.jpeg" alt="Slide 5">
                                     </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/dancefloor6.jpeg" alt="Slide 6">
-                                    </div>
                                 </div>
                                 <a class="prev">❮</a>
                                 <a class="next">❯</a>
@@ -152,7 +164,7 @@
                 
                     <div id="area2" class="areas-box">
                         <div class="area">
-                            <div class="slideshow-container" id="slideshow2">
+                            <div class="slideshow-container appear" id="slideshow2">
                                 <div class="slides-wrapper">
                                     <div class="mySlides fade-in">
                                         <img src="assets/img/camping1.jpeg" alt="Slide 1">
@@ -165,10 +177,10 @@
                                 <a class="next">❯</a>
                             </div>
                             <div class="area-content">
-                                <h2>Camping Grounds</h2>
-                                <p>Nestled in nature, our Camping Grounds offer the perfect retreat to recharge between festival adventures. Set up your tent in this tranquil area and become part of our temporary village community. Wake up to the gentle sounds of nature, share stories around communal fire pits, and forge new friendships under the starry sky.</p>
-                                <p>Our eco-friendly facilities ensure a comfortable stay, with clean showers and toilets readily available. For the early risers, join our morning yoga sessions to start your day on a peaceful note.</p>
-                                <p>The Camping Grounds aren't just a place to rest - they're an integral part of the Kultur-Kur experience, where the festival spirit continues long after the last beat fades on the main stage.</p>
+                                <h2 class="right">Camping Grounds</h2>
+                                <p class="right">Nestled in nature, our Camping Grounds offer the perfect retreat to recharge between festival adventures. Set up your tent in this tranquil area and become part of our temporary village community. Wake up to the gentle sounds of nature, share stories around communal fire pits, and forge new friendships under the starry sky.</p>
+                                <p class="right">Our eco-friendly facilities ensure a comfortable stay, with clean showers and toilets readily available. For the early risers, join our morning yoga sessions to start your day on a peaceful note.</p>
+                                <p class="right">The Camping Grounds aren't just a place to rest - they're an integral part of the Kultur-Kur experience, where the festival spirit continues long after the last beat fades on the main stage.</p>
                             </div>
                         </div>
                     </div>
@@ -181,7 +193,7 @@
                                 <p>Let the ambient sounds from our dedicated chill-out stage wash over you as you enjoy downtempo beats and mesmerizing live performances. Indulge your taste buds at our artisanal tea bar, offering a variety of herbal infusions and refreshing non-alcoholic concoctions.</p>
                                 <p>Participate in wellness workshops, sound healing sessions, or simply find a quiet corner to meditate or chat with new friends. The Chill-Out Zone is your sanctuary for relaxation and rejuvenation throughout the festival.</p>
                             </div>
-                            <div class="slideshow-container" id="slideshow3">
+                            <div class="slideshow-container appear" id="slideshow3">
                                 <div class="slides-wrapper">
                                     <div class="mySlides fade-in">
                                         <img src="assets/img/chillout1.jpeg" alt="Slide 1">
@@ -239,10 +251,15 @@
             </div>
         </footer>
 
-        <button id="scrollToTopBtn" title="Go to top">Top</button>
+        <!-- <button id="scrollToTopBtn" title="Go to top">Top</button> -->
+        <div id="scrollToTopBtn">
+            <div class="caret-left"></div>
+            <div class="caret-right"></div>
+        </div>
 
         <script src="scripts/menu.js"></script>
         <script src="scripts/reveal.js"></script>
+        <script src="contactForm.js"></script>
         <script src="scripts/background.js"></script>
         <script src="scripts/scrollToTopBtn.js"></script>
         <script src="scripts/slideshow.js"></script>
