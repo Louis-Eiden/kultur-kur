@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const contactBtn = document.querySelector(".contact-toggle-btn");
   const contactForm = document.querySelector(".contact-form");
-  console.log("page loaded");
 
   if (contactBtn && contactForm) {
-    console.log("button is", contactBtn);
     // Initially hide the form
     contactForm.style.display = "none";
 
     contactBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      console.log("clicked");
 
       // Toggle form visibility
       if (contactForm.style.display === "none") {
