@@ -394,11 +394,11 @@ nav ul li:hover a {
     font-size: 0px;
   }
   50% {
-    height: calc(6rem * 4);
+    height: calc(6rem * 3);
     font-size: 0rem;
   }
   100% {
-    height: calc(6rem * 4);
+    height: calc(6rem * 3);
     font-size: 2rem;
     visibility: visible;
   }
@@ -503,12 +503,12 @@ nav ul li:hover a {
 }
 
 /* Form styles */
-#contactForm {
+.contact-form {
   max-width: 600px;
   margin: 2rem auto;
   display: none;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -517,35 +517,42 @@ nav ul li:hover a {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-#contactForm.visible {
+.contact-form.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-#contactForm label {
+.contact-form label {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
-  color: #333;
 }
 
-#contactForm input,
-#contactForm textarea {
+.contact-form input,
+.contact-form textarea,
+.contact-form input:focus,
+.contact-form textarea:focus {
   width: 100%;
   padding: 0.8rem;
   margin-top: 0.5rem;
   border: 1px solid #ddd;
+  outline: none;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   color: #333;
 }
 
-#contactForm textarea {
+.contact-form input:active,
+.contact-form input:focus {
+  border: 1px solid #ddd;
+}
+
+.contact-form textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-#contactForm button[type="submit"] {
+.contact-form button[type="submit"] {
   background-color: #ff00bb;
   color: white;
   border: none;
@@ -556,7 +563,7 @@ nav ul li:hover a {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-#contactForm button[type="submit"]:hover {
+.contact-form button[type="submit"]:hover {
   background-color: #e600a8;
   transform: scale(1.05);
 }
