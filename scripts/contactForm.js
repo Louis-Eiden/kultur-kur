@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.classList.remove("visible");
         setTimeout(() => {
           contactForm.style.display = "none";
-          contactBtn.textContent = "Kontakt";
+          contactBtn.textContent = "Here";
         }, 500);
       }
     });

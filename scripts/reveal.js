@@ -80,9 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // area reveal
 document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(
-    ".area-content *, .slideshow-container"
-  ); // Select all elements within .area
+  const elements = document.querySelectorAll(".area-content *"); // Select all elements within .area
 
   const observer = new IntersectionObserver(
     (entries) => {

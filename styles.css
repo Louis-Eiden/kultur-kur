@@ -739,7 +739,6 @@ nav ul li:hover a {
 /* ==================== areas reveal animation ==================== */
 /* Initial state for elements */
 /* .areas-box *, */
-.slideshow-container,
 .area-content * {
   opacity: 0;
   transform: translateX(-50%);
@@ -752,7 +751,6 @@ nav ul li:hover a {
 }
 
 /* .areas-box .appear, */
-.slideshow-container .appear,
 .area-content .appear {
   transform: translateX(0);
 }
@@ -771,7 +769,6 @@ nav ul li:hover a {
 }
 
 /* .areas-box .reveal-appear, */
-.slideshow-container .reveal-appear,
 .area-content .reveal-appear {
   opacity: 1;
 }
@@ -1059,6 +1056,10 @@ footer {
   .area-content {
     padding-right: 0;
     padding-bottom: 1rem;
+  }
+
+  .area-content:nth-child(2) {
+    padding-left: 0px;
   }
 
   .slideshow-container {
