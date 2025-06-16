@@ -11,12 +11,23 @@
   scroll-behavior: smooth;
 }
 
+/* ==================== Variables ==================== */
+
+:root {
+  --section-width: calc(100% - 2rem);
+  --section-banner-margin: 1rem;
+  --section-border-radius: 2rem;
+  --main-font-color: black;
+  /* --secondary-color: #ff00bb; */
+  --secondary-color: #1ea59c;
+}
+
 /* ==================== Global styles ==================== */
 body {
   font-family: "Grotesk", sans-serif;
   background-color: black;
   color: black;
-  background-image: url("assets/img/bg/background3.jpg");
+  background-image: url("assets/img/bg/background_2024.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -38,6 +49,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin: 0;
   /* min-height: 500px; */
   background-color: black;
   color: white;
@@ -53,7 +65,7 @@ section {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #ff00bb;
+  background-color: var(--secondary-color);
   color: white;
   cursor: pointer;
   padding: 15px; 
@@ -75,7 +87,7 @@ section {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #ff00bb; /* Set a background color */
+  background-color: var(--secondary-color); /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px 18px; /* Some padding */
@@ -194,7 +206,7 @@ header {
   /* background-color: #333; */
   background-size: cover;
   color: white;
-  /* border-bottom: 50px solid #FF00BB; */
+  /* border-bottom: 50px solid var(--secondary-color); */
 }
 
 header::before {
@@ -239,7 +251,7 @@ header #hamburger-icon:hover {
 
 header #hamburger-icon:hover > div {
   cursor: pointer;
-  background-color: #ff00bb;
+  background-color: var(--secondary-color);
 }
 
 header #hamburger-icon div {
@@ -320,7 +332,7 @@ nav {
   right: 0;
   z-index: 1;
   position: absolute;
-  background-color: #ff00bb;
+  background-color: var(--secondary-color);
   width: 100%;
   height: 0;
   visibility: hidden;
@@ -460,7 +472,7 @@ nav ul li:hover a {
   padding: 2rem;
   font-size: 2.5rem;
   text-align: center;
-  color: #ff00bb;
+  color: var(--secondary-color);
   overflow: hidden;
 }
 
@@ -483,8 +495,8 @@ nav ul li:hover a {
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: 1px solid #ff00bb;
-  background-color: #ff00bb;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--secondary-color);
   font-size: 2rem;
   font-weight: 600;
   scale: 0.9;
@@ -553,7 +565,7 @@ nav ul li:hover a {
 }
 
 .contact-form button[type="submit"] {
-  background-color: #ff00bb;
+  background-color: var(--secondary-color);
   color: white;
   border: none;
   padding: 0.8rem 2rem;
@@ -573,10 +585,10 @@ nav ul li:hover a {
 .areas-box {
   flex-direction: column;
   justify-content: start;
-  margin: 1rem 2rem;
+  margin-top: 1rem;
   padding: 2rem;
-  width: calc(100% - 4rem);
-  border-radius: 2rem;
+  width: var(--section-width);
+  border-radius: var(--section-border-radius);
   background-color: white;
   color: black;
   text-align: center;
@@ -621,11 +633,11 @@ nav ul li:hover a {
 }
 
 #banner-frame {
-  margin: 1rem 2rem;
+  margin: var(--section-banner-margin);
   width: 100%;
   height: calc(750px - 4rem);
   background-color: transparent;
-  border-radius: 2rem;
+  border-radius: var(--section-border-radius);
   box-shadow: 0 0 0 4rem #000000;
 }
 
@@ -635,17 +647,48 @@ nav ul li:hover a {
   flex-direction: column;
 }
 
-#areas h1 {
+#areas-heading-box {
+  background-color: #e600a8; /* Pink background */
+  right: 1000px;
+}
+
+#areas-heading-box.reveal {
+  transform: translateX(-1000px);
+}
+
+#areas-heading {
+  background-color: #000000; /* Black overlay */
+  position: relative;
+  overflow: hidden;
+}
+
+#areas-heading h1 {
   font-size: 3.5rem;
   margin: 2rem;
   text-align: center;
+  font-weight: 900;
+  position: relative;
+  color: #000000; /* Black text (invisible on black) */
+}
+
+#areas-heading h1::before {
+  content: attr(data-text); /* You need data-text attribute! */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: transparent;
+  background: #e600a8; /* Pink shows through */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .areas-box {
-  margin: 1rem 2rem;
+  margin-top: 1rem;
   padding: 2rem;
-  width: calc(100% - 4rem);
-  border-radius: 2rem;
+  width: var(--section-width);
+  border-radius: var(--section-border-radius);
   background-color: white;
   color: black;
 }
@@ -676,7 +719,7 @@ nav ul li:hover a {
   position: relative;
   flex: 1;
   height: 550px;
-  border-radius: 2rem;
+  border-radius: var(--section-border-radius);
 }
 
 .slides-wrapper {
@@ -733,7 +776,7 @@ nav ul li:hover a {
 
 .prev:hover,
 .next:hover {
-  background-color: #ff00bb;
+  background-color: var(--secondary-color);
 }
 
 /* ==================== areas reveal animation ==================== */
@@ -779,13 +822,13 @@ nav ul li:hover a {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: calc(100% - 4rem);
-  margin: 2rem;
+  width: var(--section-width);
+  margin: 1rem;
   margin-bottom: 3rem;
   padding: 2rem;
-  background-color: #ff00bb;
+  background-color: var(--secondary-color);
   color: white;
-  border-radius: 2rem;
+  border-radius: var(--section-border-radius);
 }
 
 #location h1 {
@@ -807,7 +850,7 @@ nav ul li:hover a {
 }
 
 #location iframe {
-  border-radius: 2rem;
+  border-radius: var(--section-border-radius);
   margin: 2rem;
   margin-top: 3rem;
 }
@@ -816,7 +859,7 @@ nav ul li:hover a {
   height: 450px;
   /* keep aspect-ratio */
   width: 100%;
-  border-radius: 2rem;
+  border-radius: var(--section-border-radius);
   margin: 2rem;
   margin-top: 3rem;
 }
@@ -825,8 +868,9 @@ nav ul li:hover a {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: 2rem;
   height: 200px;
   background-color: transparent;
   color: white;
@@ -909,6 +953,8 @@ footer {
     height: 5px;
     border-radius: 5px;
   }
+  #nav {
+  }
 
   /* open animation */
 
@@ -933,7 +979,7 @@ footer {
   }
 
   nav {
-    top: 100px;
+    top: 75px;
     height: fit-content;
   }
 
@@ -968,11 +1014,11 @@ footer {
       font-size: 0px;
     }
     50% {
-      height: calc(4rem * 4);
+      height: calc(4rem * 3);
       font-size: 0rem;
     }
     100% {
-      height: calc(4rem * 4);
+      height: calc(4rem * 3);
       font-size: 2rem;
       visibility: visible;
     }
@@ -989,9 +1035,9 @@ footer {
   .areas-box,
   #location-container,
   #banner-frame {
-    margin: 1rem 2rem;
+    margin-top: 1rem;
     padding: 1rem;
-    width: calc(100% - 4rem);
+    width: var(--section-width);
   }
 
   #description-box *:not(h1) {
@@ -1013,7 +1059,7 @@ footer {
   }
 
   #banner-frame {
-    margin: 1rem 1rem;
+    margin-top: 1rem;
     height: calc(500px - 2rem);
   }
 

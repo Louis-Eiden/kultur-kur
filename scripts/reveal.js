@@ -51,6 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Area Heading
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelector("#area-heading-box");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal");
+      }
+    });
+  });
+});
+
 // // Whole Area
 // document.addEventListener("DOMContentLoaded", function () {
 //   const elements = document.querySelectorAll(".areas-box"); // Select the areas-box elements

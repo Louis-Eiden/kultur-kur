@@ -1,5 +1,5 @@
 var bg = document.body;
-const footer = document.querySelector('footer');
+const footer = document.querySelector("footer");
 
 function updateBackgroundPosition() {
   const scrollY = window.scrollY;
@@ -9,11 +9,14 @@ function updateBackgroundPosition() {
   const distanceFromBottom = pageHeight - (scrollY + viewportHeight);
 
   if (scrollY < 200) {
-    bg.style.backgroundPosition = 'top center';
+    bg.style.backgroundPosition = "top center";
+    bg.style.backgroundSize = "cover";
   } else if (distanceFromBottom <= 250) {
-    bg.style.backgroundPosition = 'bottom center';
+    bg.style.backgroundPosition = "center";
+    bg.style.backgroundSize = "cover";
   } else {
-    bg.style.backgroundPosition = 'center';
+    bg.style.backgroundPosition = "center";
+    bg.style.backgroundSize = "contain";
   }
 }
 
@@ -21,7 +24,7 @@ function updateBackgroundPosition() {
 updateBackgroundPosition();
 
 // Add event listener for scroll
-window.addEventListener('scroll', updateBackgroundPosition);
+window.addEventListener("scroll", updateBackgroundPosition);
 
 // Add event listener for resize to handle orientation changes
-window.addEventListener('resize', updateBackgroundPosition);
+window.addEventListener("resize", updateBackgroundPosition);
