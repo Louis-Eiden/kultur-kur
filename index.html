@@ -1,302 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="keywords" content="Kultur, Festival, Outdoor, Music">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Louis Eiden">
-        <link rel="stylesheet" href="styles.css">
-        <title>Kultur-Kur</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Kultur, Festival, Outdoor, Music" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Louis Eiden" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Kultur-Kur</title>
+  </head>
 
-    <body>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#description">About</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </nav>
 
-        <nav>
-            <ul>
-                <li><a href="#description">About</a></li>
-                <li><a href="#areas">Areas</a></li>
-                <li><a href="#location">Location</a></li>
-            </ul>
-        </nav>
+    <header>
+      <div id="hamburger-icon-container">
+        <div id="hamburger-icon" class="close">
+          <div id="bar-1"></div>
+          <div id="bar-2"></div>
+          <div id="bar-3"></div>
+        </div>
+      </div>
 
-        <header>
-            <div id="hamburger-icon-container">
-                <div id="hamburger-icon" class="close">
-                    <div id="bar-1"></div>
-                    <div id="bar-2"></div>
-                    <div id="bar-3"></div>
-                </div>
-            </div>
+      <div id="logo">Kultur-Kur</div>
+      <!-- <img src="assets/img/logo/" alt=""> -->
 
-            <div id="logo">Kultur-Kur</div>
-            <!-- <img src="assets/img/logo/" alt=""> -->
-
-            <!-- <div id="logo">
+      <!-- <div id="logo">
                 <img src="assets/IMG-20240715-WA0001.jpg" alt="Kultur-Kur Logo">
             </div> -->
 
-            <div id="info">15-17 August 2025 </br>Grillhütte Leideneck</div>
-        </header>
+      <div id="info">15-17 August 2025 <br />Grillhütte Leideneck</div>
+    </header>
 
-        <main>
+    <main>
+      <div class="sections-container">
+        <section id="home">
+          <!-- <iframe id="home-video" src="https://youtube.com/shorts/NkTZX_Vi5_A?si=SIy6qGqKL60R5zjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
-            <div class="sections-container">
-                
-                <section id="home">
-                    <!-- <iframe id="home-video" src="https://youtube.com/shorts/NkTZX_Vi5_A?si=SIy6qGqKL60R5zjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                    <video id="home-video" autoplay muted loop>
-                        <source src="assets/vid/Kultur Kur Open Air Festival - (Official).mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                        <!-- <img id="home-video" src="assets/img/flyer.jpg" type="image/jpeg"> -->
-                </section>
-                
-                <section id="contact">
-                    <div id="contact-content">
-                        <h2>Contact us</h2>
-                        <button class="contact-toggle-btn">Here</button>
-                        <form
-                            class="contact-form"
-                            action="https://formspree.io/f/xjkykpve"
-                            method="POST"
-                        >
-                            <label>
-                                Your email:
-                                <input type="email" name="email">
-                            </label>
-                            <label>
-                                Your message:
-                                <textarea name="message"></textarea>
-                            </label>
-                            <!-- your other form fields go here -->
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>
-                </section>
+          <div class="video-container">
+            <video id="home-video" loop playsinline>
+              <source
+                src="assets/vid/Kultur Kur Open Air Festival - (Official).mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div id="playOverlay" class="play-overlay">
+              <div class="play-button">
+                <div class="play-icon"></div>
+              </div>
+            </div>
+          </div>
 
-                <section id="description">
-                    <div id="description-box">
-                    <h1 class="right">
-                        THE FESTIVAL</br>
-                    </h1>
-                    <h4 class="right">
-                        <i>An adventure for everyone
-                        Here you can be.</i>
-                    </h4>
-                    <p>
-                    </br>
-                    </br>
-                        <b>🚉 Arrival by public transport:</b> </br>
-                        There will be a shuttle service from and to the Kastellaun bus station </br>
-                        on Friday, Saturday, and Sunday. You will be able to register for this.
-                    </p>
-                    <p>
-                        <b>🥙 Food:</b> </br>
-                        We will prepare at least one vegan meal each day on a donation basis. </br>
-                        While supplies last.
-                    </p>
-                    <p>
-                        <b>🍹 Drinks:</b> </br>
-                        We offer drinks on a donation basis. Beer, soft drinks, and sparkling water.
-                    </p>
-                    <p>
-                        <b>🚿 Sanitary facilities:</b> </br>
-                        There are toilets and showers.
-                    </p>
-                    <p>
-                        <b>🔊 Music:</b> </br>
-                        A curated selection of harmonious artists. More on this later.
-                    </p>
-                    <p>
-                        <b>👷‍♀️ Helpers:</b> </br>
-                        
-                        We need volunteers for the following areas: </br>
-                            ☑️ SET-UP/TAKE-DOWN</br>
-                            ➡️ BAR</br>
-                            ❇️ ENTRANCE</br>
-                            ❎ KITCHEN/GRILL</br>
-                            🚼 CHAI CAFE/CHILLOUT</br>
-                        </br>
-                        If you are interested, please contact Ralph or Nils.</br>
-                        </br>
-                    <b>💜 With great anticipation, Your Kultur Crew</b>
-                    </p>
-                </div>
-                </section>
+          <!-- <img id="home-video" src="assets/img/flyer.jpg" type="image/jpeg"> -->
+        </section>
 
-                <section id="banner">
-                    <div id="banner-frame"></div>
-                </section>
+        <section id="contact">
+          <div id="contact-content">
+            <h2>Contact us</h2>
+            <button class="contact-toggle-btn">Here</button>
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xjkykpve"
+              method="POST"
+            >
+              <label>
+                Your email:
+                <input type="email" name="email" />
+              </label>
+              <label>
+                Your message:
+                <textarea name="message"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
 
-                <section id="areas">
-                    <div id="areas-heading-box">
+        <section id="description">
+          <div id="description-box">
+            <h1 class="right">THE FESTIVAL<br /></h1>
+            <h4 class="right">
+              <i>An adventure for everyone Here you can be.</i>
+            </h4>
+            <p>
+              <br />
+              <br />
+              <b>🚉 Arrival by public transport:</b> <br />
+              There will be a shuttle service from and to the Kastellaun bus
+              station <br />
+              on Friday, Saturday, and Sunday. You will be able to register for
+              this.
+            </p>
+            <p>
+              <b>🥙 Food:</b> <br />
+              We will prepare at least one vegan meal each day on a donation
+              basis. <br />
+              While supplies last.
+            </p>
+            <p>
+              <b>🍹 Drinks:</b> <br />
+              We offer drinks on a donation basis. Beer, soft drinks, and
+              sparkling water.
+            </p>
+            <p>
+              <b>🚿 Sanitary facilities:</b> <br />
+              There are toilets and showers.
+            </p>
+            <p>
+              <b>🔊 Music:</b> <br />
+              A curated selection of harmonious artists. More on this later.
+            </p>
+            <p>
+              <b>👷‍♀️ Helpers:</b> <br />
+
+              We need volunteers for the following areas: <br />
+              ☑️ SET-UP/TAKE-DOWN<br />
+              ➡️ BAR<br />
+              ❇️ ENTRANCE<br />
+              ❎ KITCHEN/GRILL<br />
+              🚼 CHAI CAFE/CHILLOUT<br />
+              <br />
+              If you are interested, please contact Ralph or Nils.<br />
+              <br />
+              <b>💜 With great anticipation, Your Kultur Crew</b>
+            </p>
+          </div>
+        </section>
+
+        <section id="banner">
+          <div id="banner-frame"></div>
+        </section>
+
+        <section id="areas">
+          <!-- <div id="areas-heading-box"></div>
                         <div id="areas-heading">
                             <h1 data-text="WHAT YOU DESERVE IS WHAT YOU GET">WHAT YOU DESERVE IS WHAT YOU GET</h>
-                        </div>
-                    </div>
-                    <div id="area1" class="areas-box">
-                        <div class="area">
-                            <div class="area-content">
-                                <h2>Main Stage</h2>
-                                <p>Welcome to the heart of Kultur-Kur Festival - the Main Stage area! This vibrant space is where the magic happens. Get ready to dance the night away to pulsating beats and mesmerizing melodies from our carefully curated lineup of DJs and live acts. With state-of-the-art sound and lighting, every performance becomes an immersive experience.</p>
-                                <p>The main bar is conveniently located here, offering a wide selection of refreshing drinks to keep you energized. Don't forget to take a breather and mingle with fellow festival-goers in the chill-out corners surrounding the dance floor.</p>
-                                <p>The Main Stage area is where memories are made and the spirit of Kultur-Kur truly comes alive!</p>
-                            </div>
-                            <div class="slideshow-container appear" id="slideshow1">
-                                <div class="slides-wrapper">
-                                    <div class="mySlides fade-in">
-                                        <img src="assets/img/dancefloor_1_2023.jpeg" alt="Slide 1">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/dancefloor_2_2023.jpeg" alt="Slide 2">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/dancefloor_3_2023.jpeg" alt="Slide 3">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/dancefloor_4_2023.jpeg" alt="Slide 4">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/dancefloor_5_2023.jpeg" alt="Slide 5">
-                                    </div>
-                                </div>
-                                <a class="prev">❮</a>
-                                <a class="next">❯</a>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div id="area2" class="areas-box">
-                        <div class="area">
-                            <div class="slideshow-container appear" id="slideshow2">
-                                <div class="slides-wrapper">
-                                    <div class="mySlides fade-in">
-                                        <img src="assets/img/camping_1_2023.jpeg" alt="Slide 1">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/camping_2_2023.jpeg" alt="Slide 2">
-                                    </div>
-                                </div>
-                                <a class="prev">❮</a>
-                                <a class="next">❯</a>
-                            </div>
-                            <div class="area-content">
-                                <h2 class="right">Camping Grounds</h2>
-                                <p class="right">Nestled in nature, our Camping Grounds offer the perfect retreat to recharge between festival adventures. Set up your tent in this tranquil area and become part of our temporary village community. Wake up to the gentle sounds of nature, share stories around communal fire pits, and forge new friendships under the starry sky.</p>
-                                <p class="right">Our eco-friendly facilities ensure a comfortable stay, with clean showers and toilets readily available. For the early risers, join our morning yoga sessions to start your day on a peaceful note.</p>
-                                <p class="right">The Camping Grounds aren't just a place to rest - they're an integral part of the Kultur-Kur experience, where the festival spirit continues long after the last beat fades on the main stage.</p>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div id="area3" class="areas-box">
-                        <div class="area">
-                            <div class="area-content">
-                                <h2>Chill-Out Zone</h2>
-                                <p>Step into our Chill-Out Zone - a serene oasis amidst the festival's vibrant energy. This thoughtfully designed space offers a multisensory experience to soothe your soul and stimulate your mind. Relax on comfortable loungers under colorful canopies, or sink into plush cushions in our Moroccan-style tents.</p>
-                                <p>Let the ambient sounds from our dedicated chill-out stage wash over you as you enjoy downtempo beats and mesmerizing live performances. Indulge your taste buds at our artisanal tea bar, offering a variety of herbal infusions and refreshing non-alcoholic concoctions.</p>
-                                <p>Participate in wellness workshops, sound healing sessions, or simply find a quiet corner to meditate or chat with new friends. The Chill-Out Zone is your sanctuary for relaxation and rejuvenation throughout the festival.</p>
-                            </div>
-                            <div class="slideshow-container appear" id="slideshow3">
-                                <div class="slides-wrapper">
-                                    <div class="mySlides fade-in">
-                                        <img src="assets/img/chillout_1_2023.jpeg" alt="Slide 1">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/chillout_2_2023.jpeg" alt="Slide 2">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/chillout_3_2023.jpeg" alt="Slide 3">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/chillout_4_2023.jpeg" alt="Slide 4">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/chillout_5_2023.jpeg" alt="Slide 5">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/chillout_6_2023.jpeg" alt="Slide 6">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/chillout_7_2023.jpeg" alt="Slide 7">
-                                    </div>
-                                </div>
-                                <a class="prev">❮</a>
-                                <a class="next">❯</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="area4" class="areas-box">
-                        <div class="area">
+                        </div> -->
 
-                            <div class="slideshow-container appear" id="slideshow3">
-                                <div class="slides-wrapper">
-                                    <div class="mySlides fade-in">
-                                        <img src="assets/img/workshop_1_2024.jpg" alt="Slide 1">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/workshop_2_2024.jpg" alt="Slide 2">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/workshop_3_2024.jpg" alt="Slide 3">
-                                    </div>
-                                    <div class="mySlides">
-                                        <img src="assets/img/workshop_4_2024.jpg" alt="Slide 4">
-                                    </div>
-                                </div>
-                                <a class="prev">❮</a>
-                                <a class="next">❯</a>
-                            </div>
-                            <div class="area-content">
-                                <h2>Workshop Zone</h2>
-                                <p>Welcome to our Workshop Zone - a dynamic hub of creativity and learning where festival-goers transform into makers and innovators. This inspiring space buzzes with artistic energy, offering hands-on experiences that awaken your creative spirit and expand your skillset. Explore various stations equipped with tools, materials, and expert guidance for all skill levels.</p>
-                                <p>Immerse yourself in diverse workshops. Local artisans share their techniques through intimate sessions designed to spark your imagination.</p>
-                                <p>Connect with fellow creatives as you collaborate on community art projects, join impromptu skill-sharing circles, or showcase your newfound abilities at our daily open mic craft sessions. The Workshop Zone is your playground for experimentation, discovery, and creative expression throughout the festival.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="location">
-                    <div id="location-container">
-                        <h1>WHERE WE ARE</h1>
-                        <p>Grillhütte Leideneck<br>56288 Bell (Hunsrück)</p>
-                        <hr>
-                        <div id="maps">
-                            <div>                        
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.342713823547!2d7.357714676533236!3d50.04241097151713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be156f183421cd%3A0x8aa44db1478dc602!2sGrillh%C3%BCtte%20Leideneck!5e0!3m2!1sde!2sde!4v1721416926350!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                            <div>
-                                <img src="assets/img/map.jpeg" alt="Location" id="map">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+          <div id="area1" class="areas-box">
+            <div class="area">
+              <div class="area-content">
+                <h2>Main Stage</h2>
+                <p>
+                  Welcome to the heart of Kultur-Kur Festival - the Main Stage
+                  area! This vibrant space is where the magic happens. Get ready
+                  to dance the night away to pulsating beats and mesmerizing
+                  melodies from our carefully curated lineup of DJs and live
+                  acts. With state-of-the-art sound and lighting, every
+                  performance becomes an immersive experience.
+                </p>
+                <p>
+                  The main bar is conveniently located here, offering a wide
+                  selection of refreshing drinks to keep you energized. Don't
+                  forget to take a breather and mingle with fellow
+                  festival-goers in the chill-out corners surrounding the dance
+                  floor.
+                </p>
+                <p>
+                  The Main Stage area is where memories are made and the spirit
+                  of Kultur-Kur truly comes alive!
+                </p>
+              </div>
+              <div class="slideshow-container appear" id="slideshow1">
+                <div class="slides-wrapper">
+                  <div class="mySlides fade-in">
+                    <img
+                      src="assets/img/dancefloor_1_2023.jpeg"
+                      alt="Slide 1"
+                    />
+                  </div>
+                  <div class="mySlides">
+                    <img
+                      src="assets/img/dancefloor_2_2023.jpeg"
+                      alt="Slide 2"
+                    />
+                  </div>
+                  <div class="mySlides">
+                    <img
+                      src="assets/img/dancefloor_3_2023.jpeg"
+                      alt="Slide 3"
+                    />
+                  </div>
+                  <div class="mySlides">
+                    <img
+                      src="assets/img/dancefloor_4_2023.jpeg"
+                      alt="Slide 4"
+                    />
+                  </div>
+                  <div class="mySlides">
+                    <img
+                      src="assets/img/dancefloor_5_2023.jpeg"
+                      alt="Slide 5"
+                    />
+                  </div>
+                </div>
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+              </div>
             </div>
+          </div>
 
-        </main>
-
-        <footer>
-            <div id="footer-content">
-                <div id="footer-logo">Kultur-Kur Festival</div>
-                <div id="footer-info">15-17 August 2025 </br>Grillhütte Leideneck</div>
+          <div id="area2" class="areas-box">
+            <div class="area">
+              <div class="slideshow-container appear" id="slideshow2">
+                <div class="slides-wrapper">
+                  <div class="mySlides fade-in">
+                    <img src="assets/img/camping_1_2023.jpeg" alt="Slide 1" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/camping_2_2023.jpeg" alt="Slide 2" />
+                  </div>
+                </div>
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+              </div>
+              <div class="area-content">
+                <h2 class="right">Camping Grounds</h2>
+                <p class="right">
+                  Nestled in nature, our Camping Grounds offer the perfect
+                  retreat to recharge between festival adventures. Set up your
+                  tent in this tranquil area and become part of our temporary
+                  village community. Wake up to the gentle sounds of nature,
+                  share stories around communal fire pits, and forge new
+                  friendships under the starry sky.
+                </p>
+                <p class="right">
+                  Our eco-friendly facilities ensure a comfortable stay, with
+                  clean showers and toilets readily available. For the early
+                  risers, join our morning yoga sessions to start your day on a
+                  peaceful note.
+                </p>
+                <p class="right">
+                  The Camping Grounds aren't just a place to rest - they're an
+                  integral part of the Kultur-Kur experience, where the festival
+                  spirit continues long after the last beat fades on the main
+                  stage.
+                </p>
+              </div>
             </div>
-        </footer>
+          </div>
 
-        <!-- <button id="scrollToTopBtn" title="Go to top">Top</button> -->
-        <div id="scrollToTopBtn">
-            <div class="caret-left"></div>
-            <div class="caret-right"></div>
-        </div>
+          <div id="area3" class="areas-box">
+            <div class="area">
+              <div class="area-content">
+                <h2>Chill-Out Zone</h2>
+                <p>
+                  Step into our Chill-Out Zone - a serene oasis amidst the
+                  festival's vibrant energy. This thoughtfully designed space
+                  offers a multisensory experience to soothe your soul and
+                  stimulate your mind. Relax on comfortable loungers under
+                  colorful canopies, or sink into plush cushions in our
+                  Moroccan-style tents.
+                </p>
+                <p>
+                  Let the ambient sounds from our dedicated chill-out stage wash
+                  over you as you enjoy downtempo beats and mesmerizing live
+                  performances. Indulge your taste buds at our artisanal tea
+                  bar, offering a variety of herbal infusions and refreshing
+                  non-alcoholic concoctions.
+                </p>
+                <p>
+                  Participate in wellness workshops, sound healing sessions, or
+                  simply find a quiet corner to meditate or chat with new
+                  friends. The Chill-Out Zone is your sanctuary for relaxation
+                  and rejuvenation throughout the festival.
+                </p>
+              </div>
+              <div class="slideshow-container appear" id="slideshow3">
+                <div class="slides-wrapper">
+                  <div class="mySlides fade-in">
+                    <img src="assets/img/chillout_1_2023.jpeg" alt="Slide 1" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/chillout_2_2023.jpeg" alt="Slide 2" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/chillout_3_2023.jpeg" alt="Slide 3" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/chillout_4_2023.jpeg" alt="Slide 4" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/chillout_5_2023.jpeg" alt="Slide 5" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/chillout_6_2023.jpeg" alt="Slide 6" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/chillout_7_2023.jpeg" alt="Slide 7" />
+                  </div>
+                </div>
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+              </div>
+            </div>
+          </div>
+          <div id="area4" class="areas-box">
+            <div class="area">
+              <div class="slideshow-container appear" id="slideshow4">
+                <div class="slides-wrapper">
+                  <div class="mySlides fade-in">
+                    <img src="assets/img/workshop_1_2024.jpg" alt="Slide 1" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/workshop_2_2024.jpg" alt="Slide 2" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/workshop_3_2024.jpg" alt="Slide 3" />
+                  </div>
+                  <div class="mySlides">
+                    <img src="assets/img/workshop_4_2024.jpg" alt="Slide 4" />
+                  </div>
+                </div>
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+              </div>
+              <div class="area-content">
+                <h2 class="right">Workshop Zone</h2>
+                <p class="right">
+                  Welcome to our Workshop Zone - a dynamic hub of creativity and
+                  learning where festival-goers transform into makers and
+                  innovators. This inspiring space buzzes with artistic energy,
+                  offering hands-on experiences that awaken your creative spirit
+                  and expand your skillset. Explore various stations equipped
+                  with tools, materials, and expert guidance for all skill
+                  levels.
+                </p>
+                <p class="right">
+                  Immerse yourself in diverse workshops. Local artisans share
+                  their techniques through intimate sessions designed to spark
+                  your imagination.
+                </p>
+                <p class="right">
+                  Connect with fellow creatives as you collaborate on community
+                  art projects, join impromptu skill-sharing circles, or
+                  showcase your newfound abilities at our daily open mic craft
+                  sessions. The Workshop Zone is your playground for
+                  experimentation, discovery, and creative expression throughout
+                  the festival.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <script src="scripts/menu.js"></script>
-        <script src="scripts/reveal.js"></script>
-        <script src="scripts/contactForm.js"></script>
-        <script src="scripts/background.js"></script>
-        <script src="scripts/scrollToTopBtn.js"></script>
-        <script src="scripts/slideshow.js"></script>
+        <section id="location">
+          <div id="location-container">
+            <h1>WHERE WE ARE</h1>
+            <p>Grillhütte Leideneck<br />56288 Bell (Hunsrück)</p>
+            <hr />
+            <div id="maps">
+              <div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.342713823547!2d7.357714676533236!3d50.04241097151713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47be156f183421cd%3A0x8aa44db1478dc602!2sGrillh%C3%BCtte%20Leideneck!5e0!3m2!1sde!2sde!4v1721416926350!5m2!1sde!2sde"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div>
+                <img src="assets/img/map.jpeg" alt="Location" id="map" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
-    </body>
+    <footer>
+      <div id="footer-content">
+        <div id="footer-logo">Kultur-Kur Festival</div>
+        <div id="footer-info">15-17 August 2025 <br />Grillhütte Leideneck</div>
+      </div>
+    </footer>
+
+    <!-- <button id="scrollToTopBtn" title="Go to top">Top</button> -->
+    <div id="scrollToTopBtn">
+      <div class="caret-left"></div>
+      <div class="caret-right"></div>
+    </div>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/reveal.js"></script>
+    <script src="scripts/contactForm.js"></script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/scrollToTopBtn.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/video.js"></script>
+  </body>
 </html>

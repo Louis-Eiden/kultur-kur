@@ -53,15 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Area Heading
 document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelector("#area-heading-box");
+  const element = document.querySelector("#areas-heading-box");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal");
-      }
-    });
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          console.log("reveal heading");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(element);
 });
 
 // // Whole Area

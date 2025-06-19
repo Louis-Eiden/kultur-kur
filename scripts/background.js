@@ -7,16 +7,19 @@ function updateBackgroundPosition() {
   const pageHeight = document.documentElement.scrollHeight;
   const footerRect = footer.getBoundingClientRect();
   const distanceFromBottom = pageHeight - (scrollY + viewportHeight);
+  const isMobile = window.matchMedia("(max-width: 1875px)").matches;
 
   if (scrollY < 200) {
-    bg.style.backgroundPosition = "top center";
-    bg.style.backgroundSize = "cover";
+    bg.style.backgroundPosition = "top";
+    // bg.style.backgroundSize = "cover";
   } else if (distanceFromBottom <= 250) {
     bg.style.backgroundPosition = "center";
-    bg.style.backgroundSize = "cover";
-  } else {
+    // bg.style.backgroundSize = "cover";
+  } else if (isMobile) {
     bg.style.backgroundPosition = "center";
-    bg.style.backgroundSize = "contain";
+  } else {
+    bg.style.backgroundPosition = "bottom -1615px center";
+    // bg.style.backgroundSize = "contain";
   }
 }
 

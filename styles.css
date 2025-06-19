@@ -18,8 +18,8 @@
   --section-banner-margin: 1rem;
   --section-border-radius: 2rem;
   --main-font-color: black;
-  /* --secondary-color: #ff00bb; */
-  --secondary-color: #1ea59c;
+  --secondary-color: #ff00bb;
+  /* --secondary-color: #1ea59c; */
 }
 
 /* ==================== Global styles ==================== */
@@ -27,7 +27,7 @@ body {
   font-family: "Grotesk", sans-serif;
   background-color: black;
   color: black;
-  background-image: url("assets/img/bg/background_2024.jpg");
+  background-image: url("assets/img/bg/bg8.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -430,7 +430,7 @@ nav ul li:hover a {
 }
 
 #home-video {
-  position: absolute;
+  /* position: absolute; */
   top: calc(150px);
   margin: 2rem;
   /* width: calc(100% - 4rem)!important; */
@@ -439,6 +439,47 @@ nav ul li:hover a {
   ) !important; /* 100% - 150px for the header and 1rem */
   border-radius: 2rem !important;
   animation: forwards 1s appear;
+}
+
+.video-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.play-overlay {
+  position: absolute;
+  top: calc(150px + 2rem);
+  height: calc(100vh - 150px - 4rem);
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 30px solid black;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  margin-left: 10px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* #home-video::-webkit-media-controls {
@@ -648,7 +689,27 @@ nav ul li:hover a {
 }
 
 #areas-heading-box {
-  background-color: #e600a8; /* Pink background */
+  background: #e600a8;
+  background: -webkit-linear-gradient(
+    deg,
+    rgba(230, 0, 168, 1) 0%,
+    rgba(30, 165, 156, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    deg,
+    rgba(230, 0, 168, 1) 0%,
+    rgba(30, 165, 156, 1) 100%
+  );
+  background: linear-gradient(
+    nulldeg,
+    rgba(230, 0, 168, 1) 0%,
+    rgba(30, 165, 156, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#E600A8",
+  endColorstr="#1EA59C",
+  GradientType=0
+);
   right: 1000px;
 }
 
@@ -678,7 +739,28 @@ nav ul li:hover a {
   left: 0;
   right: 0;
   color: transparent;
-  background: #e600a8; /* Pink shows through */
+  /* background: #e600a8; Pink shows through */
+  background: #e600a8;
+  background: -webkit-linear-gradient(
+    deg,
+    rgba(230, 0, 168, 1) 0%,
+    rgba(30, 165, 156, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    deg,
+    rgba(230, 0, 168, 1) 0%,
+    rgba(30, 165, 156, 1) 100%
+  );
+  background: linear-gradient(
+    nulldeg,
+    rgba(230, 0, 168, 1) 0%,
+    rgba(30, 165, 156, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#E600A8",
+  endColorstr="#1EA59C",
+  GradientType=0
+);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -953,8 +1035,6 @@ footer {
     height: 5px;
     border-radius: 5px;
   }
-  #nav {
-  }
 
   /* open animation */
 
@@ -1026,8 +1106,8 @@ footer {
 
   #home-video {
     top: calc(125px);
-    margin: 1rem;
-    /* width: calc(100% - 2rem)!important; */
+    /* margin: 1rem; */
+    width: calc(100% - 2rem) !important;
     height: calc(100% - 125px - 2rem) !important;
   }
 
@@ -1156,7 +1236,7 @@ footer {
 
 @media (max-width: 530px) {
   body {
-    background-image: url("assets/img/bg/background1.jpg");
+    background-image: url("assets/img/bg/background_2024.jpg");
   }
   header {
     height: 75px;
