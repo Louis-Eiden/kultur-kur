@@ -19,6 +19,7 @@ function updateBackgroundPosition() {
     // bg.style.backgroundSize = "cover";
   } else if (isMobile) {
     bg.style.backgroundPosition = "center";
+    bg.style.backgroundImage = "url('assets/img/bg/bg8.jpg')";
   } else {
     bg.style.backgroundPosition = "bottom -1615px center";
     bg.style.backgroundImage = "url('assets/img/bg/bg8.jpg')";
