@@ -11,14 +11,17 @@ function updateBackgroundPosition() {
 
   if (scrollY < 200) {
     bg.style.backgroundPosition = "top";
+    bg.style.backgroundImage = "url('assets/img/bg/background3.jpg')";
     // bg.style.backgroundSize = "cover";
   } else if (distanceFromBottom <= 250) {
     bg.style.backgroundPosition = "center";
+    bg.style.backgroundImage = "url('assets/img/bg/bg8.jpg')";
     // bg.style.backgroundSize = "cover";
   } else if (isMobile) {
     bg.style.backgroundPosition = "center";
   } else {
     bg.style.backgroundPosition = "bottom -1615px center";
+    bg.style.backgroundImage = "url('assets/img/bg/bg8.jpg')";
     // bg.style.backgroundSize = "contain";
   }
 }
